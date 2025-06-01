@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="https://raymond.li/">
-    <img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/intro.gif" alt="👋 Hi there! I'm (Raymo(111|nd Li)|https://raymond.li)" title="👋 Hi there! I'm (Raymo(111|nd Li)|https://raymond.li)"/>
+  <a href="https://aryanpandya.dev/">
+    <img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/intro.gif" alt="👋 Hi there! I'm Aryan Pandya" title="👋 Hi there! I'm Aryan Pandya"/>
   </a>
 </p>
 
 <p align="center">
-  <img src="https://vbr.nathanchung.dev/badge?page_id=Raymo111.Raymo111&color=00cf00" alt="visitors"/>
+  <img src="https://vbr.nathanchung.dev/badge?page_id=aryan-136.aryan-136&color=00cf00" alt="visitors"/>
 </p>
 
 <p align="center">
@@ -28,7 +28,7 @@
 - 📝 I regularly write articles on [Medium](https://medium.com/@Aryan_13.6)
 - 💬 Ask me about **Anything**
 - 📫 How to reach me: **pandyaaryanp348@gmail.com**
-- 📄 [Know about my experiences](https://drive.google.com/file/d/1Yg5xrYvgyjvXbhTUJ6ZNcSICQxCBrP7s/view?usp=sharing)
+- 📄 [Know about my experiences](https://aryanpandya.dev/resume)
 - ⚡ Fun fact: **🧠 I enjoy thinking like a hacker… so I can build like a defender. 🎉 And yes—I still get excited like a kid when something I build just works.**
 
 ---
@@ -72,7 +72,6 @@
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"/>
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"/>
-  <!-- Add more as needed -->
 </p>
 
 ---
@@ -103,18 +102,30 @@
 <h2 align="center">👨‍💻 Repositories 👨‍💻</h2>
 <br>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/aryan-136/Algorithms" title="Algorithms"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=Algorithms&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/aryan-136/DataStructures" title="Data Structures"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=DataStructures&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a href="https://github.com/aryan-136/MyPortfolio" title="MyPortfolio">
+    <img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=MyPortfolio&theme=react&border_color=61dafb&border_radius=10">
+  </a>
+  <a href="https://github.com/aryan-136/CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems" title="CIS Sentinel">
+    <img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems&theme=react&border_color=61dafb&border_radius=10">
+  </a>
 </div>
 <br/><br/><br/><br/><br/><br/>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/aryan-136/Turkce-Heceleme-CPP" title="Turkce-Heceleme-CPP"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=Turkce-Heceleme-CPP&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/aryan-136/CopyMoveForgeryDetectionWithDCT" title="Copy&Move Forgery Detection With DCT"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=CopyMoveForgeryDetectionWithDCT&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a href="https://github.com/aryan-136/SentinelCloud-Automated-DDoS-Protection-Recovery" title="SentinelCloud">
+    <img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=SentinelCloud-Automated-DDoS-Protection-Recovery&theme=react&border_color=61dafb&border_radius=10">
+  </a>
+  <a href="https://github.com/aryan-136/QR-Based-Check-in-System" title="QR-Based Check-in System">
+    <img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=QR-Based-Check-in-System&theme=react&border_color=61dafb&border_radius=10">
+  </a>
 </div>
 <br/><br/><br/><br/><br/><br/>
 <div width="100%" align="center">
-  <a align="left" href="https://github.com/aryan-136/cpp-openmp-needleman-wunsch" title="Needleman Wunsch Algorithm With OpenMP"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=cpp-openmp-needleman-wunsch&theme=react&border_color=61dafb&border_radius=10"></a>
-  <a align="right" href="https://github.com/aryan-136/javascript-minesweeper" title="Minesweeper"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=javascript-minesweeper&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a href="https://github.com/aryan-136/Automated-Token-in-Sheet" title="Automated Token in Sheet">
+    <img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=Automated-Token-in-Sheet&theme=react&border_color=61dafb&border_radius=10">
+  </a>
+  <a href="https://github.com/aryan-136/Token-Verification-System-With-UI-" title="Token Verification System">
+    <img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=Token-Verification-System-With-UI-&theme=react&border_color=61dafb&border_radius=10">
+  </a>
 </div>
 <br/><br/><br/><br/><br/><br/>
 
