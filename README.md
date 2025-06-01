@@ -1,3 +1,23 @@
+<p align="center">
+  <a href="https://raymond.li/">
+    <img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/intro.gif" alt="👋 Hi there! I'm (Raymo(111|nd Li)|https://raymond.li)" title="👋 Hi there! I'm (Raymo(111|nd Li)|https://raymond.li)"/>
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://vbr.nathanchung.dev/badge?page_id=Raymo111.Raymo111&color=00cf00" alt="visitors"/>
+</p>
+
+<p align="center">
+  <em>𝙻𝚊𝚜𝚝 𝚖𝚊𝚗𝚞𝚊𝚕𝚕𝚢 𝚞𝚙𝚍𝚊𝚝𝚎𝚍:</em> <code>2025-05-07</code> <!-- TODO: automate this -->
+</p>
+
+<!-- ...existing code... -->
+<h1 align="center">Hi 👋, I'm Aryan Pandya</h1>
+<h3 align="center">A passionate frontend developer & cybersecurity enthusiast from India</h3>
+<!-- ...existing code... -->
+
+
 <h1 align="center">Hi 👋, I'm Aryan Pandya</h1>
 <h3 align="center">A passionate frontend developer & cybersecurity enthusiast from India</h3>
 
