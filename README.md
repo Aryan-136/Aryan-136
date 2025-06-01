@@ -12,12 +12,6 @@
   <em>𝙻𝚊𝚜𝚝 𝚖𝚊𝚗𝚞𝚊𝚕𝚕𝚢 𝚞𝚙𝚍𝚊𝚝𝚎𝚍:</em> <code>2025-05-07</code> <!-- TODO: automate this -->
 </p>
 
-<!-- ...existing code... -->
-<h1 align="center">Hi 👋, I'm Aryan Pandya</h1>
-<h3 align="center">A passionate frontend developer & cybersecurity enthusiast from India</h3>
-<!-- ...existing code... -->
-
-
 <h1 align="center">Hi 👋, I'm Aryan Pandya</h1>
 <h3 align="center">A passionate frontend developer & cybersecurity enthusiast from India</h3>
 
@@ -45,13 +39,6 @@
 
 ---
 
-## 🚀 Featured Projects
-
-- [Project Name 1](https://github.com/aryan-136/project1): Short description.
-- [Project Name 2](https://github.com/aryan-136/project2): Short description.
-
----
-
 ## 🌐 Connect with me
 
 <p align="left">
@@ -63,14 +50,6 @@
   <a href="https://www.youtube.com/c/aryan pandya" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
   <a href="https://www.leetcode.com/aryan_136" target="_blank"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black"/></a>
 </p>
-
----
-
-## 🏅 Certifications
-
-- AWS Certified Solutions Architect *(example)*
-- Google Associate Cloud Engineer *(example)*
-- (Add more...)
 
 ---
 
@@ -98,44 +77,47 @@
 
 ---
 
-## 🎯 Currently Learning
-
-- Advanced React Patterns
-- Cloud Security
-- Machine Learning
-
----
-
-## ☕ Support
-
-<p>
-  <a href="https://www.buymeacoffee.com/Aryan_13.6" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="Aryan_13.6" /></a>
-</p>
-
----
-
-## 🏆 GitHub Trophies
-
+<h2 align="center">⚡ Stats ⚡</h2>
+<br>
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=aryan-136&theme=algolia" alt="trophies"/>
+  <a href="https://github.com/denvercoder1/github-readme-streak-stats" title="Go to Source">
+    <img align="left" width=390 src="https://streak-stats.demolab.com/?user=aryan-136&theme=react&border=61dafb&hide_border=true" alt="aryan-136" />
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats" title="Go to Source">
+    <img align="right" width=390 src="https://github-readme-stats.vercel.app/api?username=aryan-136&show_icons=true&theme=react&border_color=61dafb&hide_border=true" />
+  </a>
 </p>
-
----
-
-## 📊 GitHub Stats
-
+<br><br><br><br><br><br><br><br><br>
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=aryan-136&show_icons=true&theme=radical" alt="GitHub Stats" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryan-136&layout=compact&theme=radical" alt="Top Languages" height="180"/>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryan-136&hide=c%23,powershell,Mathematica,Ruby,Objective-C,Objective-C%2b%2b,Cuda&title_color=61dafb&text_color=ffffff&icon_color=61dafb&bg_color=20232a&langs_count=8&layout=compact&border_color=61dafb&hide_border=true&size_weight=0.5&count_weight=0.5" />
+  </a>
 </p>
+<br>
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=aryan-136&theme=radical" alt="GitHub Streak" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aryan-136&theme=react-dark&bg_color=20232a&hide_border=true" width="100%"/>
 </p>
 
 ---
 
-## 🌍 Visitor Map
+<h2 align="center">👨‍💻 Repositories 👨‍💻</h2>
+<br>
+<div width="100%" align="center">
+  <a align="left" href="https://github.com/aryan-136/Algorithms" title="Algorithms"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=Algorithms&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/aryan-136/DataStructures" title="Data Structures"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=DataStructures&theme=react&border_color=61dafb&border_radius=10"></a>
+</div>
+<br/><br/><br/><br/><br/><br/>
+<div width="100%" align="center">
+  <a align="left" href="https://github.com/aryan-136/Turkce-Heceleme-CPP" title="Turkce-Heceleme-CPP"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=Turkce-Heceleme-CPP&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/aryan-136/CopyMoveForgeryDetectionWithDCT" title="Copy&Move Forgery Detection With DCT"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=CopyMoveForgeryDetectionWithDCT&theme=react&border_color=61dafb&border_radius=10"></a>
+</div>
+<br/><br/><br/><br/><br/><br/>
+<div width="100%" align="center">
+  <a align="left" href="https://github.com/aryan-136/cpp-openmp-needleman-wunsch" title="Needleman Wunsch Algorithm With OpenMP"><img align="left" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=cpp-openmp-needleman-wunsch&theme=react&border_color=61dafb&border_radius=10"></a>
+  <a align="right" href="https://github.com/aryan-136/javascript-minesweeper" title="Minesweeper"><img align="right" height="115" src="https://github-readme-stats.vercel.app/api/pin/?username=aryan-136&repo=javascript-minesweeper&theme=react&border_color=61dafb&border_radius=10"></a>
+</div>
+<br/><br/><br/><br/><br/><br/>
 
-<p align="center">
-  <img src="https://github.com/ashutosh00710/github-readme-activity-graph/blob/master/graph.png?username=aryan-136&theme=react-dark" alt="activity graph"/>
-</p>
+<h4 align="center">
+  <a href="https://github.com/aryan-136?tab=repositories" title="Show Repositories">🔎 Show More 🔍</a>
+</h4>
