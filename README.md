@@ -1,7 +1,6 @@
 <p align="center">
-  <a href="https://aryanpandya.dev/">
-    <img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/intro.gif" alt="👋 Hi there! I'm Aryan Pandya" title="👋 Hi there! I'm Aryan Pandya"/>
-  </a>
+  <h1 align="center">👋 Hi there! I'm Aryan Pandya</h1>
+  <h3 align="center">A passionate frontend developer & cybersecurity enthusiast from India</h3>
 </p>
 
 <p align="center">
@@ -11,9 +10,6 @@
 <p align="center">
   <em>𝙻𝚊𝚜𝚝 𝚖𝚊𝚗𝚞𝚊𝚕𝚕𝚢 𝚞𝚙𝚍𝚊𝚝𝚎𝚍:</em> <code>2025-05-07</code> <!-- TODO: automate this -->
 </p>
-
-<h1 align="center">Hi 👋, I'm Aryan Pandya</h1>
-<h3 align="center">A passionate frontend developer & cybersecurity enthusiast from India</h3>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=aryan-136&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
