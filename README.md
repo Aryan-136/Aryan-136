@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=aryan-136&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
   <a href="https://github.com/aryan-136?tab=followers"><img src="https://img.shields.io/github/followers/aryan-136?label=Followers&style=social" alt="GitHub Followers"></a>
-  <a href="https://twitter.com/aaryan_136"><img src="https://img.shields.io/twitter/follow/aaryan_136?logo=twitter&style=social" alt="Twitter Follow"></a>
+  <a href="[https://twitter.com/aaryan_136](https://instagram.com/aryan_13.6)"><img src="https://img.shields.io/twitter/follow/aaryan_136?logo=twitter&style=social" alt="Twitter Follow"></a>
 </p>
 
 ---
