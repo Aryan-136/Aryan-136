@@ -1,16 +1,16 @@
 <div align="center">
 
-<!-- Hero Animated Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=240&section=header&text=Aryan%20Pandya&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=Cloud%20%26%20Infrastructure%20Security%20Engineer%20%E2%80%A2%20Systems%20Architect%20%E2%80%A2%20QA%20%26%20IoT&descFontSize=16&descAlignY=58&descAlign=50" width="100%" alt="Aryan Pandya Header" />
+<!-- Hero Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=230&section=header&text=Aryan%20Pandya&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Cloud%20%26%20Infrastructure%20Security%20Engineer%20%7C%20QA%20Automation%20%7C%20IoT&descFontSize=16&descAlignY=58&descAlign=50" width="100%" alt="Aryan Pandya Header" />
 
-<!-- Quick Badges & Status -->
+<!-- Status Badges -->
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-OPEN%20FOR%20NEW%20OPPORTUNITIES-00C853?style=for-the-badge&logo=target&logoColor=white" alt="Status" />
-  <img src="https://img.shields.io/badge/LOCATION-INDIA%20(RELOCATION%20%2F%20REMOTE)-0288D1?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
-  <img src="https://img.shields.io/badge/FOCUS-CLOUD%20%7C%20SECURITY%20%7C%20DEVOPS-7B1FA2?style=for-the-badge&logo=shield&logoColor=white" alt="Focus" />
+  <img src="https://img.shields.io/badge/STATUS-OPEN%20FOR%20HIRE-00C853?style=for-the-badge&logo=target&logoColor=white" alt="Status" />
+  <img src="https://img.shields.io/badge/LOCATION-INDIA%20(OPEN%20TO%20RELOCATE%20%2F%20REMOTE)-0288D1?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+  <img src="https://img.shields.io/badge/FOCUS-CLOUD%20%7C%20SECURITY%20%7C%20QA%20%7C%20DEVOPS-7B1FA2?style=for-the-badge&logo=shield&logoColor=white" alt="Focus" />
 </p>
 
-<!-- Social & Communication Channels -->
+<!-- Social Links -->
 <p align="center">
   <a href="https://linkedin.com/in/aryanpandya" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Aryan%20Pandya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -30,26 +30,26 @@
 
 ---
 
-### ðŸ’¡ Engineering Creed
+### :bulb: Engineering Creed
 
 > *"The best infrastructure operates invisibly, defends aggressively through Zero-Trust, scales predictably under load, and proves its reliability with automated test pipelines before touching production."*
 
 ---
 
-### ðŸ‘¨â€ðŸ’» Executive Summary
+### :computer: Executive Summary
 
-I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience designing, provisioning, securing, and testing enterprise-grade environments. My technical footprint bridges **Cloud Infrastructure & Virtualization (AWS / Proxmox / Docker)**, **Cloud Security & Zero-Trust Defense (CrowdSec / WireGuard / Vaultwarden)**, **IT Systems Administration (Linux & Windows Server)**, **Full-Stack QA Automation (Selenium / PyTest / CI-CD)**, and **IoT / Edge Hardware (ESP32 / MQTT / Home Assistant)**.
+I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience designing, provisioning, securing, and testing enterprise environments. My background bridges **Cloud Infrastructure (AWS / Proxmox / Docker)**, **Cloud Security & Zero-Trust (CrowdSec / WireGuard / Vaultwarden)**, **IT Systems Administration (Linux & Windows Server)**, **QA Automation (Selenium / PyTest / CI-CD)**, and **IoT / Edge Hardware (ESP32 / MQTT / Home Assistant)**.
 
-Currently operating my own bare-metal **Private Cloud** modeled after AWS cloud architecture, delivering multi-tier virtualization, isolated VLAN networking, automated ZFS snapshots, and end-to-end telemetry observability.
+Currently operating a bare-metal **Private Cloud** modeled after AWS cloud architecture, delivering multi-tier virtualization, isolated VLAN networking, automated ZFS snapshots, and end-to-end telemetry observability.
 
 ---
 
-### ðŸ›ï¸ Flagship Architecture: "My Private Cloud"
+### :classical_building: Flagship Architecture: "My Private Cloud"
 *An enterprise-grade, AWS-inspired hybrid cloud ecosystem built from bare metal up:*
 
 ```mermaid
 flowchart TB
-    subgraph Ingress ["ðŸŒ Edge & Zero-Trust Perimeter"]
+    subgraph Ingress ["Edge & Zero-Trust Perimeter"]
         Users["Engineers & Remote Clients"]
         CF["Cloudflare Edge (WAF & DDoS Shield)"]
         WG["WireGuard Gateway (Peer-to-Peer Encryption)"]
@@ -57,7 +57,7 @@ flowchart TB
         CS["CrowdSec L7 Behavioral IPS"]
     end
 
-    subgraph Mesh ["ðŸš€ Compute & Microservices Mesh (VLAN 20)"]
+    subgraph Mesh ["Compute & Microservices Mesh (VLAN 20)"]
         direction TB
         Storage["Private Cloud Storage (Nextcloud + Redis + PostgreSQL)"]
         Media["Jellyfin Media Engine (Intel QuickSync GPU Transcoding)"]
@@ -66,14 +66,14 @@ flowchart TB
         IoT["Edge Telemetry Hub (Home Assistant + Mosquitto MQTT)"]
     end
 
-    subgraph Observability ["ðŸ“Š Telemetry, SRE & Monitoring (VLAN 30)"]
+    subgraph Observability ["Telemetry, SRE & Monitoring (VLAN 30)"]
         Prom["Prometheus Metrics Scraper"]
         Graf["Grafana Live Dashboards"]
         Kuma["Uptime Kuma SLA & Real-Time Alerts"]
         NodeExp["Node Exporter & cAdvisor"]
     end
 
-    subgraph StorageTier ["ðŸ’¾ Resilient Storage & Disaster Recovery"]
+    subgraph StorageTier ["Resilient Storage & Disaster Recovery"]
         ZFS["ZFS Zpool (RAID-Z / Mirror Array)"]
         Restic["Automated 3-2-1 Encrypted Offsite Snapshots"]
     end
@@ -89,14 +89,14 @@ flowchart TB
 
 ---
 
-### ðŸ› ï¸ Comprehensive Technical Arsenal
+### :hammer_and_wrench: Comprehensive Technical Arsenal
 
 <div align="center">
 <table>
   <thead>
     <tr>
-      <th width="22%">Domain</th>
-      <th width="78%">Technologies, Platforms & Protocols</th>
+      <th width="24%">Domain</th>
+      <th width="76%">Technologies, Platforms & Protocols</th>
     </tr>
   </thead>
   <tbody>
@@ -168,7 +168,7 @@ flowchart TB
 
 ---
 
-### ðŸ“‚ Featured Open-Source Repositories
+### :file_folder: Featured Open-Source Repositories
 
 | Repository | Specialization | Description |
 | :--- | :--- | :--- |
@@ -181,15 +181,15 @@ flowchart TB
 
 ---
 
-### ðŸ“ Published Engineering Case Studies
+### :books: Published Engineering Case Studies
 
-- ðŸ“˜ **[Building an Enterprise-Grade Private Cloud on Bare Metal](https://medium.com/@Aryan_13.6)**: Deep-dive into physical server provisioning, Proxmox KVM virtualization, and network segregation.
-- ðŸ›¡ï¸ **[Zero-Trust Perimeter Defense: Eliminating Open Ports with WireGuard & CrowdSec](https://medium.com/@Aryan_13.6)**: Practical walkthrough on defending self-hosted servers against distributed attacks.
-- ðŸ§ª **[Building Maintainable Test Automation with Page Object Model & PyTest](https://medium.com/@Aryan_13.6)**: Reducing test maintenance overhead and executing parallel cross-browser regressions in CI/CD.
+- :book: **[Building an Enterprise-Grade Private Cloud on Bare Metal](https://medium.com/@Aryan_13.6)**: Deep-dive into physical server provisioning, Proxmox KVM virtualization, and network segregation.
+- :shield: **[Zero-Trust Perimeter Defense: Eliminating Open Ports with WireGuard & CrowdSec](https://medium.com/@Aryan_13.6)**: Practical walkthrough on defending self-hosted servers against distributed attacks.
+- :test_tube: **[Building Maintainable Test Automation with Page Object Model & PyTest](https://medium.com/@Aryan_13.6)**: Reducing test maintenance overhead and executing parallel cross-browser regressions in CI/CD.
 
 ---
 
-### ðŸ“Š Live GitHub Activity & Telemetry
+### :chart_with_upwards_trend: Live GitHub Activity & Telemetry
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Aryan-136&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&title_color=7aa2f7&text_color=c0caf5&icon_color=bb9af7&bg_color=1a1b26" width="49%" alt="Aryan's GitHub Stats" />
@@ -204,14 +204,14 @@ flowchart TB
 
 <div align="center">
 
-### ðŸ¤ Let's Build Something Exceptional Together
+### :handshake: Let's Build Something Exceptional Together
 
-Whether you are looking for a **Cloud Infrastructure Engineer**, **Cloud Security Specialist**, **DevOps Implementer**, or **QA Automation Architect**, I am ready to bring engineering rigor and passion to your team.
+Whether you need a **Cloud Infrastructure Engineer**, **Cloud Security Specialist**, **DevOps Implementer**, or **QA Automation Architect**, I am ready to bring engineering rigor and passion to your team.
 
 <a href="mailto:pandyaaryanp348@gmail.com">
   <img src="https://img.shields.io/badge/Contact%20Directly-pandyaaryanp348%40gmail.com-00C853?style=for-the-badge&logo=mailgun&logoColor=white" alt="Contact Button" />
 </a>
-<a href="https://linkedin.com/in/aryanpandya">
+<a href="https://linkedin.com/in/aryanpandya" target="_blank">
   <img src="https://img.shields.io/badge/Connect%20on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Button" />
 </a>
 
