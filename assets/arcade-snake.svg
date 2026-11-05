@@ -1,12 +1,19 @@
 <svg viewBox="0 0 880 200" width="880" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e17" />
-      <stop offset="100%" stop-color="#121824" />
+      <stop offset="0%" stop-color="#070a12" />
+      <stop offset="100%" stop-color="#0f172a" />
     </linearGradient>
     <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00f5d4" />
-      <stop offset="50%" stop-color="#7928ca" />
+      <stop offset="35%" stop-color="#7928ca" />
+      <stop offset="70%" stop-color="#ff0080" />
+      <stop offset="100%" stop-color="#00f5d4" />
+    </linearGradient>
+    <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="40%" stop-color="#00e676" />
+      <stop offset="75%" stop-color="#7928ca" />
       <stop offset="100%" stop-color="#ff0080" />
     </linearGradient>
   </defs>
@@ -17,92 +24,204 @@
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 1px;
-      fill: #8b949e;
+      fill: #94a3b8;
     }
-    .neon-val {
+    .neon-cyan { fill: #00f5d4; font-weight: 900; }
+    .neon-gold { fill: #ffd166; font-weight: 900; }
+    .neon-pink { fill: #ff0080; font-weight: 900; }
+
+    /* The Continuous Growing Snake Path */
+    /* Total Path Length: ~1460px */
+    .snake-body-track {
+      fill: none;
+      stroke: url(#snakeGrad);
+      stroke-width: 10px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      animation: snakeGrowAndCrawl 14s infinite linear;
+    }
+
+    /* Head Glow Dot */
+    .snake-head-glow {
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 11px;
+      stroke-linecap: round;
+      animation: snakeHeadCrawl 14s infinite linear;
+    }
+
+    @keyframes snakeGrowAndCrawl {
+      /* Start: Short 35px snake */
+      0% {
+        stroke-dasharray: 35, 1460;
+        stroke-dashoffset: 0;
+      }
+      /* EATS FOOD 1 at ~240px: Grows to 75px */
+      16% {
+        stroke-dasharray: 75, 1460;
+        stroke-dashoffset: -240;
+      }
+      /* EATS FOOD 2 at ~480px: Grows to 140px */
+      33% {
+        stroke-dasharray: 140, 1460;
+        stroke-dashoffset: -480;
+      }
+      /* EATS FOOD 3 at ~765px: Grows to 220px */
+      52% {
+        stroke-dasharray: 220, 1460;
+        stroke-dashoffset: -765;
+      }
+      /* EATS FOOD 4 at ~1050px: Grows to 320px */
+      72% {
+        stroke-dasharray: 320, 1460;
+        stroke-dashoffset: -1050;
+      }
+      /* EATS SUPER FOOD 5 at ~1250px: Grows to 450px (MAX LONGEST SNAKE!) */
+      86% {
+        stroke-dasharray: 450, 1460;
+        stroke-dashoffset: -1250;
+      }
+      /* Full victory loop completion */
+      96% {
+        stroke-dasharray: 450, 1460;
+        stroke-dashoffset: -1460;
+      }
+      /* Quick Reset back to start */
+      100% {
+        stroke-dasharray: 35, 1460;
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes snakeHeadCrawl {
+      0% {
+        stroke-dasharray: 4, 1460;
+        stroke-dashoffset: 0;
+      }
+      96% {
+        stroke-dasharray: 4, 1460;
+        stroke-dashoffset: -1460;
+      }
+      100% {
+        stroke-dasharray: 4, 1460;
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* Food Pellets Appearing and Disappearing on Capture */
+    /* Food 1 at (280, 80) */
+    .food-1 {
       fill: #00f5d4;
-      font-weight: 900;
+      animation: food1Life 14s infinite ease-in-out;
     }
-    .food-tile {
+    @keyframes food1Life {
+      0%, 15% { opacity: 1; transform: scale(1); }
+      16%, 98% { opacity: 0; transform: scale(0); }
+      99%, 100% { opacity: 1; }
+    }
+
+    /* Food 2 at (460, 140) */
+    .food-2 {
       fill: #ffd166;
-      animation: foodPulse 1.5s infinite ease-in-out;
+      animation: food2Life 14s infinite ease-in-out;
     }
-    @keyframes foodPulse {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
-    }
-
-    @keyframes crawlWaypoints {
-      0%   { transform: translate(175px, 78px); }
-      15%  { transform: translate(295px, 78px); }
-      30%  { transform: translate(295px, 123px); }
-      45%  { transform: translate(445px, 123px); }
-      60%  { transform: translate(595px, 63px); }
-      75%  { transform: translate(715px, 108px); }
-      90%  { transform: translate(715px, 48px); }
-      100% { transform: translate(175px, 78px); }
+    @keyframes food2Life {
+      0%, 12% { opacity: 0; }
+      14%, 32% { opacity: 1; }
+      33%, 100% { opacity: 0; }
     }
 
-    .snake-head {
-      fill: #00f5d4;
-      animation: crawlWaypoints 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .snake-seg-1 {
-      fill: #00c647;
-      animation: crawlWaypoints 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-      animation-delay: -0.15s;
-    }
-    .snake-seg-2 {
-      fill: #26a641;
-      animation: crawlWaypoints 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-      animation-delay: -0.30s;
-    }
-    .snake-seg-3 {
-      fill: #7928ca;
-      animation: crawlWaypoints 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-      animation-delay: -0.45s;
-    }
-    .snake-seg-4 {
+    /* Food 3 at (460, 55) */
+    .food-3 {
       fill: #ff0080;
-      animation: crawlWaypoints 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-      animation-delay: -0.60s;
+      animation: food3Life 14s infinite ease-in-out;
     }
-    .snake-seg-5 {
-      fill: #7928ca;
-      animation: crawlWaypoints 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-      animation-delay: -0.75s;
+    @keyframes food3Life {
+      0%, 30% { opacity: 0; }
+      32%, 51% { opacity: 1; }
+      52%, 100% { opacity: 0; }
     }
-    .snake-seg-6 {
+
+    /* Food 4 at (680, 55) */
+    .food-4 {
       fill: #00f5d4;
-      opacity: 0.7;
-      animation: crawlWaypoints 12s infinite cubic-bezier(0.4, 0, 0.2, 1);
-      animation-delay: -0.90s;
+      animation: food4Life 14s infinite ease-in-out;
     }
+    @keyframes food4Life {
+      0%, 50% { opacity: 0; }
+      51%, 71% { opacity: 1; }
+      72%, 100% { opacity: 0; }
+    }
+
+    /* Food 5 (Super Golden Apple) at (520, 120) */
+    .food-5 {
+      fill: #ffb703;
+      animation: food5Life 14s infinite ease-in-out;
+    }
+    @keyframes food5Life {
+      0%, 70% { opacity: 0; }
+      71%, 85% { opacity: 1; }
+      86%, 100% { opacity: 0; }
+    }
+
+    /* Score Telemetry Live Changes with Snake Growth */
+    .score-t0 { animation: score0 14s infinite; }
+    .score-t1 { animation: score1 14s infinite; }
+    .score-t2 { animation: score2 14s infinite; }
+    .score-t3 { animation: score3 14s infinite; }
+    .score-t4 { animation: score4 14s infinite; }
+    .score-t5 { animation: score5 14s infinite; }
+
+    @keyframes score0 { 0%, 15% { opacity: 1; } 16%, 100% { opacity: 0; } }
+    @keyframes score1 { 0%, 15% { opacity: 0; } 16%, 32% { opacity: 1; } 33%, 100% { opacity: 0; } }
+    @keyframes score2 { 0%, 32% { opacity: 0; } 33%, 51% { opacity: 1; } 52%, 100% { opacity: 0; } }
+    @keyframes score3 { 0%, 51% { opacity: 0; } 52%, 71% { opacity: 1; } 72%, 100% { opacity: 0; } }
+    @keyframes score4 { 0%, 71% { opacity: 0; } 72%, 85% { opacity: 1; } 86%, 100% { opacity: 0; } }
+    @keyframes score5 { 0%, 85% { opacity: 0; } 86%, 98% { opacity: 1; } 99%, 100% { opacity: 0; } }
   </style>
 
-  <rect x="2" y="2" width="876" height="196" rx="8" fill="url(#bgGrad)" stroke="#2d3748" stroke-width="1.5" />
+  <!-- Arcade Outer Enclosure -->
+  <rect x="2" y="2" width="876" height="196" rx="8" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
 
-  <rect x="2" y="2" width="876" height="32" rx="8" fill="#0d1117" />
+  <!-- Top Arcade Marquee -->
+  <rect x="2" y="2" width="876" height="32" rx="8" fill="#090d16" />
   <rect x="2" y="32" width="876" height="1.5" fill="url(#borderGrad)" />
 
   <text x="18" y="22" class="arcade-title">
-    <tspan fill="#ff0080">[ARCADE // CYBER-SNAKE]</tspan> |
-    SCORE: <tspan class="neon-val">04,820</tspan> |
-    HIGH: <tspan class="neon-val">14,250</tspan> |
-    LEVEL: <tspan class="neon-val">09</tspan> |
-    SPEED: <tspan class="neon-val">1.5x</tspan>
+    <tspan fill="#ff0080">[CYBER-SNAKE ARCADE]</tspan> |
+    SCORE:
+    <tspan class="neon-cyan score-t0">00,100</tspan>
+    <tspan class="neon-cyan score-t1">00,350</tspan>
+    <tspan class="neon-cyan score-t2">00,750</tspan>
+    <tspan class="neon-cyan score-t3">01,350</tspan>
+    <tspan class="neon-cyan score-t4">02,400</tspan>
+    <tspan class="neon-pink score-t5">05,000 [MAX!]</tspan>
+    | HIGH: <tspan class="neon-gold">14,850</tspan> |
+    LENGTH:
+    <tspan class="neon-cyan score-t0">03</tspan>
+    <tspan class="neon-cyan score-t1">06</tspan>
+    <tspan class="neon-cyan score-t2">12</tspan>
+    <tspan class="neon-cyan score-t3">20</tspan>
+    <tspan class="neon-cyan score-t4">32</tspan>
+    <tspan class="neon-pink score-t5">48 [LONGEST]</tspan>
   </text>
-  <text x="862" y="22" text-anchor="end" class="arcade-title" fill="#ffd166">
-    [LIVE TELEMETRY: HUNTING COMMITS]
+  <text x="862" y="22" text-anchor="end" class="arcade-title">
+    <tspan class="neon-gold score-t0">[HUNTING PELLET 1]</tspan>
+    <tspan class="neon-cyan score-t1">[CAPTURED! GROWING +1]</tspan>
+    <tspan class="neon-gold score-t2">[CAPTURED! GROWING +2]</tspan>
+    <tspan class="neon-cyan score-t3">[CAPTURED! SPEED UP]</tspan>
+    <tspan class="neon-gold score-t4">[BONUS TARGET ACQUIRED]</tspan>
+    <tspan class="neon-pink score-t5">[LONGEST SNAKE! REBOOTING]</tspan>
   </text>
 
+  <!-- Contribution Grid Tiles -->
   <g id="tiles">
     <rect x='25' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='25' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='25' y='78' width='11' height='11' rx='2.5' fill='#39d353' />
     <rect x='25' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='25' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='25' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='25' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='25' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='40' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='40' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
@@ -126,7 +245,7 @@
     <rect x='70' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='70' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='85' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='85' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='85' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='85' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='85' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='85' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
@@ -136,7 +255,7 @@
     <rect x='100' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='100' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='100' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='100' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='100' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='100' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='100' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='115' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
@@ -150,7 +269,7 @@
     <rect x='130' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='130' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='130' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='130' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='130' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='130' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='130' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='145' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
@@ -170,315 +289,326 @@
     <rect x='175' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='175' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='175' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='175' y='93' width='11' height='11' rx='2.5' class='food-tile' />
-    <rect x='175' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='175' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='175' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='190' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='190' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='190' y='78' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='190' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='190' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='190' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='190' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='175' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='175' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='175' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='175' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='190' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='190' y='63' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='190' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='190' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='190' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='190' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='190' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='205' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='205' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='205' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='205' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='205' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='205' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='205' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='220' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='220' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='205' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='205' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='220' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='220' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='220' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='220' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='220' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='220' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='220' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='220' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='220' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='235' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='235' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='235' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='235' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='235' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='235' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='235' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='235' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='235' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='235' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='235' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='235' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='235' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='250' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='250' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='250' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='250' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='250' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='250' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='250' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='250' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='250' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='265' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='265' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='250' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='250' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='250' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='265' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='265' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='265' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='265' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='265' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='265' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='265' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='280' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='265' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='265' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='280' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='280' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='280' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='280' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='280' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='280' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='280' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='280' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='280' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='280' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='295' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='295' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='295' y='78' width='11' height='11' rx='2.5' class='food-tile' />
-    <rect x='295' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='295' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='295' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='295' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='295' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='295' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='295' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='310' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='310' y='48' width='11' height='11' rx='2.5' fill='#39d353' />
     <rect x='310' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='310' y='78' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='310' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='310' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='310' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='310' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='310' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='310' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='310' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='325' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='325' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='325' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='325' y='93' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='325' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='325' y='63' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='325' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='325' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='325' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='325' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='325' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='340' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='340' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='340' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='340' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='340' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='340' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='340' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='340' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='340' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='355' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='355' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='355' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='355' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='355' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='355' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='355' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='370' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='370' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='370' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='370' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='370' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='340' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='355' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='355' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='355' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='355' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='355' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='355' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='355' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='370' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='370' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='370' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='370' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='370' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='370' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='370' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='370' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='385' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='385' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='385' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='385' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='385' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='385' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='385' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='385' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='400' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='400' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='400' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='400' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='400' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='400' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='400' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='400' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='415' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='415' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='415' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='400' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='400' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='400' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='400' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='415' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='415' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='415' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='415' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='415' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='415' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='415' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='430' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='430' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='430' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='430' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='415' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='430' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='430' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='430' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='430' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='430' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='430' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='430' y='123' width='11' height='11' rx='2.5' fill='#39d353' />
     <rect x='430' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='445' y='48' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='445' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='445' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='445' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='445' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='445' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='445' y='123' width='11' height='11' rx='2.5' class='food-tile' />
-    <rect x='445' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='460' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='460' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='460' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='445' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='445' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='445' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='445' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='445' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='460' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='460' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='460' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='460' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='460' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='460' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='460' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='460' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='475' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='460' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='475' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='475' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='475' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='475' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='475' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='475' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='475' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='475' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='475' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='475' y='138' width='11' height='11' rx='2.5' fill='#39d353' />
     <rect x='490' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='490' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='490' y='78' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='490' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='490' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='490' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='490' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='490' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='505' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='505' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='505' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='505' y='93' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='505' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='505' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='505' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='520' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='490' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='490' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='490' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='505' y='48' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='505' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='505' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='505' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='505' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='505' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='505' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='520' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='520' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='520' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='520' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='520' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='520' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='520' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='520' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='520' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='535' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='520' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='535' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='535' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='535' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='535' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='535' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='535' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='535' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='550' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='550' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='550' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='550' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='550' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='550' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='550' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='535' y='93' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='535' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='535' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='535' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='550' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='550' y='63' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='550' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='550' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='550' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='550' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='550' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='565' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='565' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='565' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='565' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='565' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='565' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='565' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='565' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='565' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='565' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='580' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='565' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='565' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='580' y='48' width='11' height='11' rx='2.5' fill='#39d353' />
     <rect x='580' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='580' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='580' y='93' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='580' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='580' y='123' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='580' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='580' y='78' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='580' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='580' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='580' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='580' y='138' width='11' height='11' rx='2.5' fill='#39d353' />
     <rect x='595' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='595' y='63' width='11' height='11' rx='2.5' class='food-tile' />
-    <rect x='595' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='595' y='93' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='595' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='595' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='595' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='595' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='595' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='595' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='610' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='610' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='595' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='595' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='610' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='610' y='63' width='11' height='11' rx='2.5' fill='#39d353' />
     <rect x='610' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='610' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='610' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='610' y='123' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='610' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='625' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='625' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='625' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='625' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='625' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='625' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='625' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='640' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='640' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='640' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='640' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='610' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='610' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='610' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='610' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='625' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='625' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='625' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='625' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='625' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='625' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='625' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='640' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='640' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='640' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='640' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='640' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='640' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='640' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='655' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='655' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='640' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='655' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='655' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='655' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='655' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='655' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='655' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='655' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='655' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='655' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='670' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='670' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='670' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='670' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='670' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='670' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='670' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='670' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='670' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='670' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='670' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='670' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='670' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='670' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='685' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='685' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='685' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='685' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='685' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='685' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='685' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='685' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='700' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='700' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='700' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='700' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='700' y='108' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='700' y='123' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='700' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='715' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='685' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='685' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='685' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='700' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='700' y='63' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='700' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='700' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='700' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='700' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='700' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='715' y='48' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='715' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='715' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='715' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='715' y='108' width='11' height='11' rx='2.5' class='food-tile' />
-    <rect x='715' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='715' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='715' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='715' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='715' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='715' y='138' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='730' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='730' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='730' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='730' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='730' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='730' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='730' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='730' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
     <rect x='730' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='730' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='730' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='730' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='745' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='745' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='745' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='745' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='745' y='108' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='745' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='745' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='760' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='760' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='760' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='745' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='745' y='63' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='745' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='745' y='93' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='745' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='745' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='745' y='138' width='11' height='11' rx='2.5' fill='#39d353' />
+    <rect x='760' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='760' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='760' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='760' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='760' y='108' width='11' height='11' rx='2.5' fill='#39d353' />
-    <rect x='760' y='123' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='760' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='760' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='760' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='775' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='775' y='48' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='775' y='63' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='775' y='78' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='775' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='775' y='78' width='11' height='11' rx='2.5' fill='#006d32' />
+    <rect x='775' y='93' width='11' height='11' rx='2.5' fill='#0e4429' />
     <rect x='775' y='108' width='11' height='11' rx='2.5' fill='#26a641' />
     <rect x='775' y='123' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='775' y='138' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='790' y='48' width='11' height='11' rx='2.5' fill='#006d32' />
-    <rect x='790' y='63' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='790' y='78' width='11' height='11' rx='2.5' fill='#26a641' />
-    <rect x='790' y='93' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='775' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='790' y='48' width='11' height='11' rx='2.5' fill='#0e4429' />
+    <rect x='790' y='63' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='790' y='78' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='790' y='93' width='11' height='11' rx='2.5' fill='#006d32' />
     <rect x='790' y='108' width='11' height='11' rx='2.5' fill='#161b22' />
-    <rect x='790' y='123' width='11' height='11' rx='2.5' fill='#0e4429' />
-    <rect x='790' y='138' width='11' height='11' rx='2.5' fill='#26a641' />
+    <rect x='790' y='123' width='11' height='11' rx='2.5' fill='#161b22' />
+    <rect x='790' y='138' width='11' height='11' rx='2.5' fill='#161b22' />
 
   </g>
 
-  <g id="snake">
-    <rect width="11" height="11" rx="3" class="snake-seg-6" />
-    <rect width="11" height="11" rx="3" class="snake-seg-5" />
-    <rect width="11" height="11" rx="3" class="snake-seg-4" />
-    <rect width="11" height="11" rx="3" class="snake-seg-3" />
-    <rect width="11" height="11" rx="3" class="snake-seg-2" />
-    <rect width="11" height="11" rx="3" class="snake-seg-1" />
-    <rect width="11" height="11" rx="3.5" class="snake-head" />
+  <!-- The 5 Food Pellets (Appear / Vanish on eat) -->
+  <g id="food-pellets">
+    <!-- Food 1: (280, 80) -->
+    <rect x="274" y="74" width="12" height="12" rx="3" class="food-1" />
+    <!-- Food 2: (460, 140) -->
+    <rect x="454" y="134" width="12" height="12" rx="3" class="food-2" />
+    <!-- Food 3: (460, 55) -->
+    <rect x="454" y="49" width="12" height="12" rx="3" class="food-3" />
+    <!-- Food 4: (680, 55) -->
+    <rect x="674" y="49" width="12" height="12" rx="3" class="food-4" />
+    <!-- Food 5: (520, 120) -->
+    <rect x="514" y="114" width="14" height="14" rx="4" class="food-5" />
   </g>
 
-  <rect x="2" y="178" width="876" height="20" rx="4" fill="#0d1117" />
+  <!-- The Growing & Slithering Snake Path -->
+  <g id="snake-path-group">
+    <path d="M 100 80 L 280 80 L 280 140 L 460 140 L 460 55 L 680 55 L 680 120 L 520 120 L 520 145 L 100 145 Z" class="snake-body-track" />
+    <path d="M 100 80 L 280 80 L 280 140 L 460 140 L 460 55 L 680 55 L 680 120 L 520 120 L 520 145 L 100 145 Z" class="snake-head-glow" />
+  </g>
+
+  <!-- Bottom Terminal Status Bar -->
+  <rect x="2" y="178" width="876" height="20" rx="4" fill="#090d16" />
   <text x="18" y="192" class="arcade-title" font-size="9px">
-    <tspan fill="#00f5d4">STATUS: HUNTING COMMITS</tspan> - MULTIPLIER: 4X - ARYAN PANDYA PRIVATE CLOUD ECOSYSTEM
+    <tspan fill="#00f5d4">AUTONOMOUS AGENT TELEMETRY</tspan> - STREAK: ACTIVE - ARYAN PANDYA PRIVATE CLOUD
   </text>
   <text x="862" y="192" text-anchor="end" class="arcade-title" font-size="9px" fill="#7928ca">
-    PAUSE: [SPACE] - REBOOT: [R]
+    LOOP: REPEATING ON MAX LENGTH
   </text>
 </svg>
