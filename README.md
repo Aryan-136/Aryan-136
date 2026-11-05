@@ -170,9 +170,9 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
 <!-- Retro Arcade Animated Contribution Graph -->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg" />
-    <img alt="Aryan's Cyber Snake Arcade Game" src="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake-dark.svg?v=3" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg?v=3" />
+    <img alt="Aryan's Cyber Snake Arcade Game" src="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg?v=3" width="100%" />
   </picture>
   <p align="center">
     <a href="https://aryan-136.github.io/cyber-snake-arcade/" target="_blank">
