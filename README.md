@@ -150,18 +150,42 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Aryan-136&label=PROFILE%20VIEWS&color=00C853&style=for-the-badge" alt="Profile Views" />
-  <img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-30-0288D1?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" />
   <img src="https://img.shields.io/github/followers/Aryan-136?label=FOLLOWERS&style=for-the-badge&logo=github&color=7B1FA2" alt="Followers" />
-  <img src="https://img.shields.io/badge/CONTRIBUTIONS-110%2B%20COMMITS-F57C00?style=for-the-badge&logo=git&logoColor=white" alt="Contributions" />
+  <img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-31-0288D1?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" />
+  <img src="https://img.shields.io/badge/CONTRIBUTIONS-120%2B%20COMMITS-F57C00?style=for-the-badge&logo=git&logoColor=white" alt="Contributions" />
 </p>
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Aryan-136&theme=tokyonight" width="98%" alt="Aryan's GitHub Overview" />
-</p>
-
+<!-- Retro Arcade Animated Contribution Graph -->
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Aryan-136&theme=tokyonight" width="49%" alt="Repositories per Language" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Aryan-136&theme=tokyonight" width="49%" alt="Most Commit Language" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg" />
+    <img alt="Aryan's Contribution Snake Animation" src="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg" width="100%" />
+  </picture>
+</div>
+
+<br/>
+
+<!-- Responsive Dynamic Telemetry: GitHub Overview & Streak Tracker -->
+<div align="center">
+  <a href="https://github.com/Aryan-136">
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=Aryan-136&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=false" alt="Aryan's GitHub Stats" height="195" />
+  </a>
+  <a href="https://github.com/Aryan-136">
+    <img src="https://streak-stats.demolab.com/?user=Aryan-136&theme=tokyonight&hide_border=true" alt="Aryan's Streak Stats" height="195" />
+  </a>
+</div>
+
+<br/>
+
+<!-- Responsive Languages & Repository Distribution -->
+<div align="center">
+  <a href="https://github.com/Aryan-136">
+    <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Aryan-136&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top Languages" height="195" />
+  </a>
+  <a href="https://github.com/Aryan-136">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Aryan-136&theme=tokyonight" height="195" alt="Repositories per Language" />
+  </a>
 </div>
 
 ---
