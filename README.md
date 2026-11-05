@@ -40,52 +40,8 @@
 
 I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience designing, provisioning, securing, and testing enterprise environments. My background bridges **Cloud Infrastructure (AWS / Proxmox / Docker)**, **Cloud Security & Zero-Trust (CrowdSec / WireGuard / Vaultwarden)**, **IT Systems Administration (Linux & Windows Server)**, **QA Automation (Selenium / PyTest / CI-CD)**, and **IoT / Edge Hardware (ESP32 / MQTT / Home Assistant)**.
 
-Currently operating a bare-metal **Private Cloud** modeled after AWS cloud architecture, delivering multi-tier virtualization, isolated VLAN networking, automated ZFS snapshots, and end-to-end telemetry observability.
-
----
-
-### :classical_building: Flagship Architecture: "My Private Cloud"
-*An enterprise-grade, AWS-inspired hybrid cloud ecosystem built from bare metal up:*
-
-```mermaid
-flowchart TB
-    subgraph Ingress ["Edge & Zero-Trust Perimeter"]
-        Users["Engineers & Remote Clients"]
-        CF["Cloudflare Edge (WAF & DDoS Shield)"]
-        WG["WireGuard Gateway (Peer-to-Peer Encryption)"]
-        NPM["Nginx Reverse Proxy & Automated SSL"]
-        CS["CrowdSec L7 Behavioral IPS"]
-    end
-
-    subgraph Mesh ["Compute & Microservices Mesh (VLAN 20)"]
-        direction TB
-        Storage["Private Cloud Storage (Nextcloud + Redis + PostgreSQL)"]
-        Media["Jellyfin Media Engine (Intel QuickSync GPU Transcoding)"]
-        Mail["Self-Hosted Mail Infrastructure (Mailcow / Postfix / Dovecot)"]
-        Vault["Secrets Management (Vaultwarden Bitwarden-Compatible)"]
-        IoT["Edge Telemetry Hub (Home Assistant + Mosquitto MQTT)"]
-    end
-
-    subgraph Observability ["Telemetry, SRE & Monitoring (VLAN 30)"]
-        Prom["Prometheus Metrics Scraper"]
-        Graf["Grafana Live Dashboards"]
-        Kuma["Uptime Kuma SLA & Real-Time Alerts"]
-        NodeExp["Node Exporter & cAdvisor"]
-    end
-
-    subgraph StorageTier ["Resilient Storage & Disaster Recovery"]
-        ZFS["ZFS Zpool (RAID-Z / Mirror Array)"]
-        Restic["Automated 3-2-1 Encrypted Offsite Snapshots"]
-    end
-
-    Users --> CF --> WG --> NPM
-    NPM --> CS
-    NPM --> Mesh
-    Observability -.->|Scrapes Telemetry| Mesh
-    Observability -.->|Host Health| Ingress
-    Mesh -->|NFS / Persistent Bindings| StorageTier
-    StorageTier --> Restic
-```
+> :cloud: **Flagship Architecture: [My Private Cloud & Infrastructure Ecosystem â†’](https://github.com/Aryan-136/my-private-cloud)**  
+> *AWS-inspired hybrid infrastructure: Proxmox virtualization, Zero-Trust WireGuard perimeter, CrowdSec behavioral IPS, and ZFS 3-2-1 disaster recovery. [View Full Architectural Blueprint & Specs â†’](https://github.com/Aryan-136/my-private-cloud#%EF%B8%8F-high-level-system-architecture)*
 
 ---
 
@@ -173,10 +129,11 @@ flowchart TB
 | Repository | Specialization | Description |
 | :--- | :--- | :--- |
 | **[`my-private-cloud`](https://github.com/Aryan-136/my-private-cloud)** | **Cloud Architecture** | Core AWS-inspired private cloud architecture, disaster recovery specifications, and unified container orchestration. |
-| **[`infrastructure-monitoring`](https://github.com/Aryan-136/infrastructure-monitoring)** | **Observability** | Prometheus time-series metrics collector, Grafana dashboard configurations, node-exporter, and Uptime Kuma SLA monitoring. |
 | **[`self-hosted-security-services`](https://github.com/Aryan-136/self-hosted-security-services)** | **Cloud Security** | Zero-Trust WireGuard VPN, Vaultwarden password management, CrowdSec behavioral IPS, and automated SSL/TLS rotation. |
+| **[`infrastructure-monitoring`](https://github.com/Aryan-136/infrastructure-monitoring)** | **Observability** | Prometheus time-series metrics collector, Grafana dashboard configurations, node-exporter, and Uptime Kuma SLA monitoring. |
 | **[`qa-automation-framework`](https://github.com/Aryan-136/qa-automation-framework)** | **QA & Testing** | Production Selenium + PyTest Page Object Model (POM) framework, parallel execution, API validation, and GitHub Actions CI/CD. |
 | **[`docker-infrastructure`](https://github.com/Aryan-136/docker-infrastructure)** | **DevOps & Containers** | Production Docker daemon security hardening (CIS compliance), Portainer CE fleet manager, and Watchtower automated rolling updates. |
+| **[`qr-ticket-auth-system`](https://github.com/Aryan-136/qr-ticket-auth-system)** | **Event Security** | QR event pass & real-time token authentication system with single-use replay prevention. Built for THM Surat. |
 | **[`iot-automation-platform`](https://github.com/Aryan-136/iot-automation-platform)** | **IoT & Edge Hardware** | Microcontroller telemetry on ESP32, isolated IoT VLAN, MQTT Mosquitto broker, and Home Assistant automation engine. |
 
 ---
