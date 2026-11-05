@@ -40,8 +40,8 @@
 
 I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience designing, provisioning, securing, and testing enterprise environments. My background bridges **Cloud Infrastructure (AWS / Proxmox / Docker)**, **Cloud Security & Zero-Trust (CrowdSec / WireGuard / Vaultwarden)**, **IT Systems Administration (Linux & Windows Server)**, **QA Automation (Selenium / PyTest / CI-CD)**, and **IoT / Edge Hardware (ESP32 / MQTT / Home Assistant)**.
 
-> :cloud: **Flagship Architecture: [My Private Cloud & Infrastructure Ecosystem â†’](https://github.com/Aryan-136/my-private-cloud)**  
-> *AWS-inspired hybrid infrastructure: Proxmox virtualization, Zero-Trust WireGuard perimeter, CrowdSec behavioral IPS, and ZFS 3-2-1 disaster recovery. [View Full Architectural Blueprint & Specs â†’](https://github.com/Aryan-136/my-private-cloud#%EF%B8%8F-high-level-system-architecture)*
+> :cloud: **Flagship Architecture: [My Private Cloud & Infrastructure Ecosystem ->](https://github.com/Aryan-136/my-private-cloud)**  
+> *AWS-inspired hybrid infrastructure: Proxmox virtualization, Zero-Trust WireGuard perimeter, CrowdSec behavioral IPS, and ZFS 3-2-1 disaster recovery. [View Full Architectural Blueprint & Specs ->](https://github.com/Aryan-136/my-private-cloud#%EF%B8%8F-high-level-system-architecture)*
 
 ---
 
