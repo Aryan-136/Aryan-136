@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=230&section=header&text=Aryan%20Pandya&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Cloud%20%26%20Infrastructure%20Security%20Engineer%20%7C%20QA%20Automation%20%7C%20IoT&descFontSize=16&descAlignY=58&descAlign=50" width="100%" alt="Aryan Pandya Header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=230&section=header&text=Aryan%20Pandya&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Cloud%20and%20Infrastructure%20Security%20Engineer%20%7C%20QA%20Automation%20%7C%20IoT&descFontSize=16&descAlignY=58&descAlign=50" width="100%" alt="Aryan Pandya Header" />
 
 <!-- Status Badges -->
 <p align="center">
