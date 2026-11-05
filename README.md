@@ -1,78 +1,160 @@
+<div align="center">
+
+<!-- Hero Animated Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=240&section=header&text=Aryan%20Pandya&fontSize=48&fontColor=ffffff&fontAlignY=36&desc=Cloud%20%26%20Infrastructure%20Security%20Engineer%20%E2%80%A2%20Systems%20Architect%20%E2%80%A2%20QA%20%26%20IoT&descFontSize=16&descAlignY=58&descAlign=50" width="100%" alt="Aryan Pandya Header" />
+
+<!-- Quick Badges & Status -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=220&section=header&text=Aryan%20Pandya&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Cloud%20%26%20Infrastructure%20Engineer%20%7C%20Cloud%20Security%20%7C%20QA%20Automation%20%7C%20IoT&descFontSize=17&descAlignY=62&descAlign=50" width="100%" alt="Header" />
+  <img src="https://img.shields.io/badge/STATUS-OPEN%20FOR%20NEW%20OPPORTUNITIES-00C853?style=for-the-badge&logo=target&logoColor=white" alt="Status" />
+  <img src="https://img.shields.io/badge/LOCATION-INDIA%20(RELOCATION%20%2F%20REMOTE)-0288D1?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
+  <img src="https://img.shields.io/badge/FOCUS-CLOUD%20%7C%20SECURITY%20%7C%20DEVOPS-7B1FA2?style=for-the-badge&logo=shield&logoColor=white" alt="Focus" />
 </p>
 
+<!-- Social & Communication Channels -->
 <p align="center">
-  <a href="https://linkedin.com/in/aryanpandya"><img src="https://img.shields.io/badge/LinkedIn-Aryan%20Pandya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:pandyaaryanp348@gmail.com"><img src="https://img.shields.io/badge/Email-pandyaaryanp348%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://medium.com/@Aryan_13.6"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" /></a>
-  <a href="https://twitter.com/aaryan_136"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" /></a>
+  <a href="https://linkedin.com/in/aryanpandya" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Aryan%20Pandya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:pandyaaryanp348@gmail.com">
+    <img src="https://img.shields.io/badge/Email-pandyaaryanp348%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://medium.com/@Aryan_13.6" target="_blank">
+    <img src="https://img.shields.io/badge/Medium-@Aryan__13.6-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
+  </a>
+  <a href="https://twitter.com/aaryan_136" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-@aaryan__136-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
+  </a>
 </p>
+
+</div>
 
 ---
 
-## ðŸ‘¨â€ðŸ’» Executive Summary
+### ðŸ’¡ Engineering Creed
 
-> **Multi-Domain Systems & Cloud Engineer** with practical expertise across **Cloud Infrastructure & Architecture (AWS & Private Cloud)**, **Cloud Security & Zero-Trust Hardening**, **System Administration (Linux & Windows Server)**, **QA Automation (Selenium & PyTest)**, and **IoT / Embedded Systems (ESP32 & Raspberry Pi)**.
->
-> Architected and operate an enterprise-grade self-hosted **Private Cloud** modeled after AWS core architecture (Compute, Software-Defined Networking, ZFS Storage, Observability, and Disaster Recovery) while building automated CI/CD and QA testing pipelines.
+> *"The best infrastructure operates invisibly, defends aggressively through Zero-Trust, scales predictably under load, and proves its reliability with automated test pipelines before touching production."*
 
 ---
 
-## ðŸ› ï¸ Technical Stack & Tools
+### ðŸ‘¨â€ðŸ’» Executive Summary
+
+I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience designing, provisioning, securing, and testing enterprise-grade environments. My technical footprint bridges **Cloud Infrastructure & Virtualization (AWS / Proxmox / Docker)**, **Cloud Security & Zero-Trust Defense (CrowdSec / WireGuard / Vaultwarden)**, **IT Systems Administration (Linux & Windows Server)**, **Full-Stack QA Automation (Selenium / PyTest / CI-CD)**, and **IoT / Edge Hardware (ESP32 / MQTT / Home Assistant)**.
+
+Currently operating my own bare-metal **Private Cloud** modeled after AWS cloud architecture, delivering multi-tier virtualization, isolated VLAN networking, automated ZFS snapshots, and end-to-end telemetry observability.
+
+---
+
+### ðŸ›ï¸ Flagship Architecture: "My Private Cloud"
+*An enterprise-grade, AWS-inspired hybrid cloud ecosystem built from bare metal up:*
+
+```mermaid
+flowchart TB
+    subgraph Ingress ["ðŸŒ Edge & Zero-Trust Perimeter"]
+        Users["Engineers & Remote Clients"]
+        CF["Cloudflare Edge (WAF & DDoS Shield)"]
+        WG["WireGuard Gateway (Peer-to-Peer Encryption)"]
+        NPM["Nginx Reverse Proxy & Automated SSL"]
+        CS["CrowdSec L7 Behavioral IPS"]
+    end
+
+    subgraph Mesh ["ðŸš€ Compute & Microservices Mesh (VLAN 20)"]
+        direction TB
+        Storage["Private Cloud Storage (Nextcloud + Redis + PostgreSQL)"]
+        Media["Jellyfin Media Engine (Intel QuickSync GPU Transcoding)"]
+        Mail["Self-Hosted Mail Infrastructure (Mailcow / Postfix / Dovecot)"]
+        Vault["Secrets Management (Vaultwarden Bitwarden-Compatible)"]
+        IoT["Edge Telemetry Hub (Home Assistant + Mosquitto MQTT)"]
+    end
+
+    subgraph Observability ["ðŸ“Š Telemetry, SRE & Monitoring (VLAN 30)"]
+        Prom["Prometheus Metrics Scraper"]
+        Graf["Grafana Live Dashboards"]
+        Kuma["Uptime Kuma SLA & Real-Time Alerts"]
+        NodeExp["Node Exporter & cAdvisor"]
+    end
+
+    subgraph StorageTier ["ðŸ’¾ Resilient Storage & Disaster Recovery"]
+        ZFS["ZFS Zpool (RAID-Z / Mirror Array)"]
+        Restic["Automated 3-2-1 Encrypted Offsite Snapshots"]
+    end
+
+    Users --> CF --> WG --> NPM
+    NPM --> CS
+    NPM --> Mesh
+    Observability -.->|Scrapes Telemetry| Mesh
+    Observability -.->|Host Health| Ingress
+    Mesh -->|NFS / Persistent Bindings| StorageTier
+    StorageTier --> Restic
+```
+
+---
+
+### ðŸ› ï¸ Comprehensive Technical Arsenal
 
 <div align="center">
-  <table>
+<table>
+  <thead>
     <tr>
-      <td align="center" width="160"><b>Cloud & Virtualization</b></td>
+      <th width="22%">Domain</th>
+      <th width="78%">Technologies, Platforms & Protocols</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Cloud & Virtualization</b></td>
       <td>
         <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS" />
         <img src="https://img.shields.io/badge/Proxmox%20VE-E57000?style=flat-square&logo=proxmox&logoColor=white" alt="Proxmox" />
         <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+        <img src="https://img.shields.io/badge/Docker%20Compose-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Compose" />
         <img src="https://img.shields.io/badge/Portainer-13BEBB?style=flat-square&logo=portainer&logoColor=white" alt="Portainer" />
         <img src="https://img.shields.io/badge/KVM-000000?style=flat-square&logo=linux&logoColor=white" alt="KVM" />
       </td>
     </tr>
     <tr>
-      <td align="center" width="160"><b>Cloud Security</b></td>
+      <td><b>Cloud Security & Zero-Trust</b></td>
       <td>
         <img src="https://img.shields.io/badge/CrowdSec%20IPS-232B5D?style=flat-square&logo=crowdsec&logoColor=white" alt="CrowdSec" />
         <img src="https://img.shields.io/badge/WireGuard%20VPN-88171A?style=flat-square&logo=wireguard&logoColor=white" alt="WireGuard" />
         <img src="https://img.shields.io/badge/Vaultwarden-175DDC?style=flat-square&logo=bitwarden&logoColor=white" alt="Vaultwarden" />
         <img src="https://img.shields.io/badge/Cloudflare%20Zero%20Trust-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare" />
         <img src="https://img.shields.io/badge/Fail2ban-FF0000?style=flat-square&logo=linux&logoColor=white" alt="Fail2ban" />
+        <img src="https://img.shields.io/badge/SSL%2FTLS%20Hardening-009639?style=flat-square&logo=letsencrypt&logoColor=white" alt="TLS" />
       </td>
     </tr>
     <tr>
-      <td align="center" width="160"><b>SysAdmin & Networks</b></td>
+      <td><b>Systems & Networks</b></td>
       <td>
         <img src="https://img.shields.io/badge/Ubuntu%20Server-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu" />
         <img src="https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white" alt="Debian" />
         <img src="https://img.shields.io/badge/Windows%20Server-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows Server" />
-        <img src="https://img.shields.io/badge/Nginx%20Proxy%20Manager-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx" />
-        <img src="https://img.shields.io/badge/VLANs%20%26%20DNS-4B32C3?style=flat-square&logo=pihole&logoColor=white" alt="Networking" />
+        <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx" />
+        <img src="https://img.shields.io/badge/VLANs%20%26%20Subnetting-3178C6?style=flat-square&logo=cisco&logoColor=white" alt="VLANs" />
+        <img src="https://img.shields.io/badge/Pi--hole%20DNS-96060C?style=flat-square&logo=pihole&logoColor=white" alt="Pi-hole" />
       </td>
     </tr>
     <tr>
-      <td align="center" width="160"><b>Observability</b></td>
+      <td><b>Observability & SRE</b></td>
       <td>
         <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus" />
         <img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana" />
         <img src="https://img.shields.io/badge/Uptime%20Kuma-2196F3?style=flat-square&logo=statuspal&logoColor=white" alt="Uptime Kuma" />
-        <img src="https://img.shields.io/badge/cAdvisor-00599C?style=flat-square&logo=docker&logoColor=white" alt="cAdvisor" />
+        <img src="https://img.shields.io/badge/Node%20Exporter-00599C?style=flat-square&logo=prometheus&logoColor=white" alt="Node Exporter" />
+        <img src="https://img.shields.io/badge/ZFS%20Storage-00599C?style=flat-square&logo=linux&logoColor=white" alt="ZFS" />
       </td>
     </tr>
     <tr>
-      <td align="center" width="160"><b>QA & Test Automation</b></td>
+      <td><b>QA & Test Automation</b></td>
       <td>
         <img src="https://img.shields.io/badge/Selenium%20WebDriver-43B02A?style=flat-square&logo=selenium&logoColor=white" alt="Selenium" />
         <img src="https://img.shields.io/badge/PyTest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="PyTest" />
+        <img src="https://img.shields.io/badge/Page%20Object%20Model-000000?style=flat-square&logo=python&logoColor=white" alt="POM" />
         <img src="https://img.shields.io/badge/Postman%20API-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
         <img src="https://img.shields.io/badge/GitHub%20Actions%20CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD" />
       </td>
     </tr>
     <tr>
-      <td align="center" width="160"><b>IoT & Embedded</b></td>
+      <td><b>IoT & Edge Systems</b></td>
       <td>
         <img src="https://img.shields.io/badge/ESP32%20%2F%20ESP8266-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP32" />
         <img src="https://img.shields.io/badge/Raspberry%20Pi-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white" alt="Raspberry Pi" />
@@ -80,72 +162,63 @@
         <img src="https://img.shields.io/badge/MQTT%20(Mosquitto)-3C5280?style=flat-square&logo=eclipse-mosquitto&logoColor=white" alt="MQTT" />
       </td>
     </tr>
-  </table>
+  </tbody>
+</table>
 </div>
 
 ---
 
-## ðŸ›ï¸ Featured Architecture: Self-Hosted Private Cloud
+### ðŸ“‚ Featured Open-Source Repositories
 
-Modeled after AWS core infrastructure tiers (Compute, Networking, Storage, Security, and Monitoring):
-
-```mermaid
-graph TD
-    Client["Remote Access / Engineers"] --> CF["Cloudflare Zero Trust / DDoS Filter"]
-    CF --> WG["WireGuard VPN Gateway / Reverse Proxy"]
-    
-    subgraph LAN["Isolated Private Cloud Network (VLANs)"]
-        WG --> NPM["Nginx Reverse Proxy & SSL Automation"]
-        
-        subgraph Compute["Virtualization & Container Mesh (Proxmox / Docker)"]
-            NPM --> Nextcloud["Private Cloud Storage (Nextcloud S3-style)"]
-            NPM --> Jellyfin["Media Streaming Engine (Jellyfin)"]
-            NPM --> Mail["Mail Infrastructure (Mailcow / Postfix / Dovecot)"]
-            NPM --> SecVault["Secrets Vault (Vaultwarden)"]
-            NPM --> IoT["IoT Automation Hub (Home Assistant + MQTT)"]
-        end
-        
-        subgraph Telemetry["Observability & Defense Perimeter"]
-            Prometheus["Prometheus Metrics Collector"] --> Grafana["Grafana Dashboards"]
-            UptimeKuma["Uptime Kuma Health Check"]
-            CrowdSec["CrowdSec IPS & Behavioral Analyzer"]
-        end
-        
-        subgraph Storage["Storage & Disaster Recovery"]
-            ZFS["ZFS Zpool Storage Array"]
-            Restic["Automated 3-2-1 Encrypted Offsite Backup"]
-        end
-    end
-```
-
----
-
-## ðŸ“‚ Core Engineering Projects
-
-| Repository | Focus Area | Description |
+| Repository | Specialization | Description |
 | :--- | :--- | :--- |
-| **[`my-private-cloud`](https://github.com/Aryan-136/my-private-cloud)** | **Cloud & Infrastructure** | Full-stack AWS-inspired private cloud architecture, disaster recovery specifications, and deployment orchestration. |
-| **[`infrastructure-monitoring`](https://github.com/Aryan-136/infrastructure-monitoring)** | **Observability** | Prometheus time-series metrics, Grafana dashboards, node-exporter, and Uptime Kuma SLA monitoring. |
-| **[`self-hosted-security-services`](https://github.com/Aryan-136/self-hosted-security-services)** | **Cloud Security** | Zero-trust WireGuard VPN, Vaultwarden password management, CrowdSec behavioral IPS, and automated SSL/TLS. |
-| **[`qa-automation-framework`](https://github.com/Aryan-136/qa-automation-framework)** | **QA & Test Engineering** | Selenium + PyTest Page Object Model framework, parallel cross-browser runs, API testing, and GitHub Actions CI/CD. |
-| **[`docker-infrastructure`](https://github.com/Aryan-136/docker-infrastructure)** | **DevOps & Containers** | Production Docker daemon security hardening (CIS compliance), Portainer CE, Watchtower automated updates. |
-| **[`iot-automation-platform`](https://github.com/Aryan-136/iot-automation-platform)** | **IoT & Edge Hardware** | Microcontroller telemetry on ESP32, isolated IoT VLAN, MQTT Mosquitto broker, and Home Assistant automation. |
+| **[`my-private-cloud`](https://github.com/Aryan-136/my-private-cloud)** | **Cloud Architecture** | Core AWS-inspired private cloud architecture, disaster recovery specifications, and unified container orchestration. |
+| **[`infrastructure-monitoring`](https://github.com/Aryan-136/infrastructure-monitoring)** | **Observability** | Prometheus time-series metrics collector, Grafana dashboard configurations, node-exporter, and Uptime Kuma SLA monitoring. |
+| **[`self-hosted-security-services`](https://github.com/Aryan-136/self-hosted-security-services)** | **Cloud Security** | Zero-Trust WireGuard VPN, Vaultwarden password management, CrowdSec behavioral IPS, and automated SSL/TLS rotation. |
+| **[`qa-automation-framework`](https://github.com/Aryan-136/qa-automation-framework)** | **QA & Testing** | Production Selenium + PyTest Page Object Model (POM) framework, parallel execution, API validation, and GitHub Actions CI/CD. |
+| **[`docker-infrastructure`](https://github.com/Aryan-136/docker-infrastructure)** | **DevOps & Containers** | Production Docker daemon security hardening (CIS compliance), Portainer CE fleet manager, and Watchtower automated rolling updates. |
+| **[`iot-automation-platform`](https://github.com/Aryan-136/iot-automation-platform)** | **IoT & Edge Hardware** | Microcontroller telemetry on ESP32, isolated IoT VLAN, MQTT Mosquitto broker, and Home Assistant automation engine. |
 
 ---
 
-## ðŸ“Š GitHub Analytics
+### ðŸ“ Published Engineering Case Studies
+
+- ðŸ“˜ **[Building an Enterprise-Grade Private Cloud on Bare Metal](https://medium.com/@Aryan_13.6)**: Deep-dive into physical server provisioning, Proxmox KVM virtualization, and network segregation.
+- ðŸ›¡ï¸ **[Zero-Trust Perimeter Defense: Eliminating Open Ports with WireGuard & CrowdSec](https://medium.com/@Aryan_13.6)**: Practical walkthrough on defending self-hosted servers against distributed attacks.
+- ðŸ§ª **[Building Maintainable Test Automation with Page Object Model & PyTest](https://medium.com/@Aryan_13.6)**: Reducing test maintenance overhead and executing parallel cross-browser regressions in CI/CD.
+
+---
+
+### ðŸ“Š Live GitHub Activity & Telemetry
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Aryan-136&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&title_color=7aa2f7&text_color=c0caf5&icon_color=bb9af7&bg_color=1a1b26" width="49%" alt="Aryan's GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Aryan-136&theme=tokyonight&hide_border=true&stroke=7aa2f7&background=1a1b26&ring=7aa2f7&fire=ff9e64&currStreakNum=c0caf5" width="49%" alt="Aryan's Streak Stats" />
+</div>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Aryan-136&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" width="48%" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Aryan-136&theme=tokyonight&hide_border=true" width="48%" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Aryan-136&layout=compact&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=c0caf5&bg_color=1a1b26" width="60%" alt="Top Languages" />
 </p>
 
 ---
 
-## â˜• Support & Connect
+<div align="center">
 
-<p align="center">
-  <a href="https://www.buymeacoffee.com/Aryan_13.6" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="Buy Me A Coffee" />
-  </a>
-</p>
+### ðŸ¤ Let's Build Something Exceptional Together
+
+Whether you are looking for a **Cloud Infrastructure Engineer**, **Cloud Security Specialist**, **DevOps Implementer**, or **QA Automation Architect**, I am ready to bring engineering rigor and passion to your team.
+
+<a href="mailto:pandyaaryanp348@gmail.com">
+  <img src="https://img.shields.io/badge/Contact%20Directly-pandyaaryanp348%40gmail.com-00C853?style=for-the-badge&logo=mailgun&logoColor=white" alt="Contact Button" />
+</a>
+<a href="https://linkedin.com/in/aryanpandya">
+  <img src="https://img.shields.io/badge/Connect%20on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Button" />
+</a>
+
+<br><br>
+
+<a href="https://www.buymeacoffee.com/Aryan_13.6" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="48" width="200" alt="Buy Me A Coffee" />
+</a>
+
+</div>
