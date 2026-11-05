@@ -191,14 +191,21 @@ flowchart TB
 
 ### :chart_with_upwards_trend: Live GitHub Activity & Telemetry
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Aryan-136&show_icons=true&theme=tokyonight&count_private=true&hide_border=true&title_color=7aa2f7&text_color=c0caf5&icon_color=bb9af7&bg_color=1a1b26" width="49%" alt="Aryan's GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Aryan-136&theme=tokyonight&hide_border=true&stroke=7aa2f7&background=1a1b26&ring=7aa2f7&fire=ff9e64&currStreakNum=c0caf5" width="49%" alt="Aryan's Streak Stats" />
-</div>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Aryan-136&label=PROFILE%20VIEWS&color=00C853&style=for-the-badge" alt="Profile Views" />
+  <img src="https://img.shields.io/badge/PUBLIC%20REPOSITORIES-30-0288D1?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" />
+  <img src="https://img.shields.io/github/followers/Aryan-136?label=FOLLOWERS&style=for-the-badge&logo=github&color=7B1FA2" alt="Followers" />
+  <img src="https://img.shields.io/badge/CONTRIBUTIONS-110%2B%20COMMITS-F57C00?style=for-the-badge&logo=git&logoColor=white" alt="Contributions" />
+</p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Aryan-136&layout=compact&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=c0caf5&bg_color=1a1b26" width="60%" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Aryan-136&theme=tokyonight" width="98%" alt="Aryan's GitHub Overview" />
 </p>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Aryan-136&theme=tokyonight" width="49%" alt="Repositories per Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Aryan-136&theme=tokyonight" width="49%" alt="Most Commit Language" />
+</div>
 
 ---
 
