@@ -171,7 +171,7 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
 <div align="center">
   <img src="https://raw.githubusercontent.com/Aryan-136/Aryan-136/main/assets/arcade-snake.svg" width="100%" alt="Aryan's Cyber Snake Arcade Game" />
   <p align="center">
-    <a href="https://github.com/Aryan-136/cyber-snake-arcade" target="_blank">
+    <a href="https://aryan-136.github.io/cyber-snake-arcade/" target="_blank">
       <img src="https://img.shields.io/badge/PLAY%20LIVE-CYBER%20SNAKE%20ARCADE%20GAME-00F5D4?style=for-the-badge&logo=gamepad&logoColor=090D16" alt="Play Game" />
     </a>
   </p>
