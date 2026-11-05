@@ -1,7 +1,14 @@
 <div align="center">
 
-<!-- Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=230&section=header&text=Aryan%20Pandya&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Cloud%20and%20Infrastructure%20Security%20Engineer%20%7C%20QA%20Automation%20%7C%20IoT&descFontSize=16&descAlignY=58&descAlign=50" width="100%" alt="Aryan Pandya Header" />
+<!-- Animated Header Wave Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=230&section=header&text=Aryan%20Pandya&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Cloud%20and%20Infrastructure%20Security%20Engineer%20%7C%20QA%20Automation%20%7C%20IoT&descFontSize=16&descAlignY=58&descAlign=50" width="100%" alt="Aryan Pandya Header Banner" />
+
+<!-- Dynamic Animated Typing Subheading -->
+<a href="https://github.com/Aryan-136">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00E676&center=true&vCenter=true&width=650&height=50&lines=Cloud+Infrastructure+and+Security+Engineer;Zero-Trust+Perimeter+and+Bare-Metal+Private+Cloud;QA+Automation+Architect+and+IoT+Telemetry" alt="Typing SVG" />
+</a>
+
+<br/>
 
 <!-- Status Badges -->
 <p align="center">
@@ -10,7 +17,7 @@
   <img src="https://img.shields.io/badge/FOCUS-CLOUD%20%7C%20SECURITY%20%7C%20QA%20%7C%20DEVOPS-7B1FA2?style=for-the-badge&logo=shield&logoColor=white" alt="Focus" />
 </p>
 
-<!-- Social Links -->
+<!-- Social & Communication Channels -->
 <p align="center">
   <a href="https://linkedin.com/in/aryanpandya" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Aryan%20Pandya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -48,6 +55,12 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
 ### :hammer_and_wrench: Comprehensive Technical Arsenal
 
 <div align="center">
+
+<!-- Visual Interactive Skill Matrix -->
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=aws,docker,linux,windows,py,selenium,jenkins,githubactions,grafana,prometheus,nginx,cloudflare,postgres,redis,cpp,git&theme=dark&perline=8" alt="Aryan's Core Tech Stack" />
+</p>
+
 <table>
   <thead>
     <tr>
@@ -75,18 +88,19 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
         <img src="https://img.shields.io/badge/Vaultwarden-175DDC?style=flat-square&logo=bitwarden&logoColor=white" alt="Vaultwarden" />
         <img src="https://img.shields.io/badge/Cloudflare%20Zero%20Trust-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare" />
         <img src="https://img.shields.io/badge/Fail2ban-FF0000?style=flat-square&logo=linux&logoColor=white" alt="Fail2ban" />
-        <img src="https://img.shields.io/badge/SSL%2FTLS%20Hardening-009639?style=flat-square&logo=letsencrypt&logoColor=white" alt="TLS" />
+        <img src="https://img.shields.io/badge/UFW-FFA500?style=flat-square&logo=linux&logoColor=white" alt="UFW" />
+        <img src="https://img.shields.io/badge/Let's%20Encrypt-003A70?style=flat-square&logo=letsencrypt&logoColor=white" alt="SSL" />
       </td>
     </tr>
     <tr>
       <td><b>Systems & Networks</b></td>
       <td>
-        <img src="https://img.shields.io/badge/Ubuntu%20Server-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu" />
-        <img src="https://img.shields.io/badge/Debian-A81D33?style=flat-square&logo=debian&logoColor=white" alt="Debian" />
+        <img src="https://img.shields.io/badge/Linux%20(Ubuntu%20%2F%20Debian)-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Linux" />
         <img src="https://img.shields.io/badge/Windows%20Server-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows Server" />
-        <img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx" />
-        <img src="https://img.shields.io/badge/VLANs%20%26%20Subnetting-3178C6?style=flat-square&logo=cisco&logoColor=white" alt="VLANs" />
-        <img src="https://img.shields.io/badge/Pi--hole%20DNS-96060C?style=flat-square&logo=pihole&logoColor=white" alt="Pi-hole" />
+        <img src="https://img.shields.io/badge/Active%20Directory-0078D6?style=flat-square&logo=windows&logoColor=white" alt="AD" />
+        <img src="https://img.shields.io/badge/VLAN%20Segregation-4CAF50?style=flat-square&logo=cisco&logoColor=white" alt="VLAN" />
+        <img src="https://img.shields.io/badge/DHCP%20%2F%20DNS-3F51B5?style=flat-square&logo=serverfault&logoColor=white" alt="DNS" />
+        <img src="https://img.shields.io/badge/ZFS%20Snapshots-000000?style=flat-square&logo=openzfs&logoColor=white" alt="ZFS" />
       </td>
     </tr>
     <tr>
@@ -94,9 +108,8 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
       <td>
         <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus" />
         <img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana" />
-        <img src="https://img.shields.io/badge/Uptime%20Kuma-2196F3?style=flat-square&logo=statuspal&logoColor=white" alt="Uptime Kuma" />
-        <img src="https://img.shields.io/badge/Node%20Exporter-00599C?style=flat-square&logo=prometheus&logoColor=white" alt="Node Exporter" />
-        <img src="https://img.shields.io/badge/ZFS%20Storage-00599C?style=flat-square&logo=linux&logoColor=white" alt="ZFS" />
+        <img src="https://img.shields.io/badge/Node%20Exporter-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Node Exporter" />
+        <img src="https://img.shields.io/badge/Uptime%20Kuma-5CD67E?style=flat-square&logo=uptime-kuma&logoColor=white" alt="Uptime Kuma" />
       </td>
     </tr>
     <tr>
@@ -104,16 +117,15 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
       <td>
         <img src="https://img.shields.io/badge/Selenium%20WebDriver-43B02A?style=flat-square&logo=selenium&logoColor=white" alt="Selenium" />
         <img src="https://img.shields.io/badge/PyTest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="PyTest" />
-        <img src="https://img.shields.io/badge/Page%20Object%20Model-000000?style=flat-square&logo=python&logoColor=white" alt="POM" />
-        <img src="https://img.shields.io/badge/Postman%20API-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
-        <img src="https://img.shields.io/badge/GitHub%20Actions%20CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD" />
+        <img src="https://img.shields.io/badge/Python%203-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/POM%20Architecture-607D8B?style=flat-square&logo=designpatterns&logoColor=white" alt="POM" />
+        <img src="https://img.shields.io/badge/GitHub%20Actions%20CI%2FCD-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="CI/CD" />
       </td>
     </tr>
     <tr>
       <td><b>IoT & Edge Systems</b></td>
       <td>
-        <img src="https://img.shields.io/badge/ESP32%20%2F%20ESP8266-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP32" />
-        <img src="https://img.shields.io/badge/Raspberry%20Pi-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white" alt="Raspberry Pi" />
+        <img src="https://img.shields.io/badge/ESP32%20Microcontroller-E7352C?style=flat-square&logo=espressif&logoColor=white" alt="ESP32" />
         <img src="https://img.shields.io/badge/Home%20Assistant-41BDF5?style=flat-square&logo=homeassistant&logoColor=white" alt="Home Assistant" />
         <img src="https://img.shields.io/badge/MQTT%20(Mosquitto)-3C5280?style=flat-square&logo=eclipse-mosquitto&logoColor=white" alt="MQTT" />
       </td>
@@ -196,17 +208,22 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
 
 Whether you need a **Cloud Infrastructure Engineer**, **Cloud Security Specialist**, **DevOps Implementer**, or **QA Automation Architect**, I am ready to bring engineering rigor and passion to your team.
 
-<a href="mailto:pandyaaryanp348@gmail.com">
-  <img src="https://img.shields.io/badge/Contact%20Directly-pandyaaryanp348%40gmail.com-00C853?style=for-the-badge&logo=mailgun&logoColor=white" alt="Contact Button" />
-</a>
-<a href="https://linkedin.com/in/aryanpandya" target="_blank">
-  <img src="https://img.shields.io/badge/Connect%20on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Button" />
-</a>
+<p align="center">
+  <a href="mailto:pandyaaryanp348@gmail.com">
+    <img src="https://img.shields.io/badge/Contact%20Directly-pandyaaryanp348%40gmail.com-00C853?style=for-the-badge&logo=mailgun&logoColor=white" alt="Contact Button" />
+  </a>
+  <a href="https://linkedin.com/in/aryanpandya" target="_blank">
+    <img src="https://img.shields.io/badge/Connect%20on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Button" />
+  </a>
+</p>
 
-<br><br>
+<p align="center">
+  <a href="https://www.buymeacoffee.com/Aryan_13.6" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="48" width="200" alt="Buy Me A Coffee" />
+  </a>
+</p>
 
-<a href="https://www.buymeacoffee.com/Aryan_13.6" target="_blank">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="48" width="200" alt="Buy Me A Coffee" />
-</a>
+<!-- Animated Waving Footer Divider -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,11,20&height=120&section=footer" width="100%" alt="Footer Wave" />
 
 </div>
