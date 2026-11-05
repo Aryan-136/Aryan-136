@@ -167,12 +167,12 @@ I am a **Multi-Domain Cloud & Systems Engineer** with hands-on experience design
   <img src="https://img.shields.io/badge/CONTRIBUTIONS-120%2B%20COMMITS-F57C00?style=for-the-badge&logo=git&logoColor=white" alt="Contributions" />
 </p>
 
-<!-- Retro Arcade Animated Contribution Graph -->
+<!-- Official Platane/snk Contribution Grid Animation -->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake-dark.svg?v=4" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg?v=4" />
-    <img alt="Aryan's Cyber Snake Arcade Game" src="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg?v=4" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake-dark.svg?v=platane-official" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg?v=platane-official" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Aryan-136/Aryan-136/output/github-contribution-grid-snake.svg?v=platane-official" width="100%" />
   </picture>
   <p align="center">
     <a href="https://aryan-136.github.io/cyber-snake-arcade/" target="_blank">
